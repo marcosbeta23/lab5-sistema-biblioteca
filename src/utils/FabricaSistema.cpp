@@ -1,4 +1,6 @@
 #include "FabricaSistema.h"
+#include "../controladores/GestorSesion.h"
+#include "../controladores/GestorUsuarios.h"
 
 FabricaSistema* FabricaSistema::instancia = nullptr;
 
@@ -12,24 +14,12 @@ FabricaSistema* FabricaSistema::getInstancia() {
     return instancia;
 }
 
-/*
-    Estos métodos se completan cuando implementemos los controladores concretos:
-
-    - GestorSesion
-    - GestorUsuarios
-    - GestorMateriales
-    - GestorPrestamos
-
-    Por ahora retornan nullptr para dejar definida la estructura de la fábrica
-    sin acoplarla todavía a clases que aún no existen.
-*/
-
 IGestorSesion* FabricaSistema::getIGestorSesion() {
-    return nullptr;
+    return GestorSesion::getInstancia();
 }
 
 IGestorUsuarios* FabricaSistema::getIGestorUsuarios() {
-    return nullptr;
+    return GestorUsuarios::getInstancia();
 }
 
 IGestorMateriales* FabricaSistema::getIGestorMateriales() {
