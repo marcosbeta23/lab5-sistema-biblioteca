@@ -1,6 +1,7 @@
 #include "FabricaSistema.h"
 #include "../controladores/GestorSesion.h"
 #include "../controladores/GestorUsuarios.h"
+#include "../controladores/GestorMateriales.h"
 
 FabricaSistema* FabricaSistema::instancia = nullptr;
 
@@ -23,7 +24,7 @@ IGestorUsuarios* FabricaSistema::getIGestorUsuarios() {
 }
 
 IGestorMateriales* FabricaSistema::getIGestorMateriales() {
-    return nullptr;
+    return GestorMateriales::getInstancia();
 }
 
 IGestorPrestamos* FabricaSistema::getIGestorPrestamos() {
