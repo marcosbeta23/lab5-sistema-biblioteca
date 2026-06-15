@@ -5,7 +5,8 @@
 #include <vector>
 #include <stdexcept>
 
-#include "../utils/FabricaSistema.h"`n#include "../utils/DatosPrueba.h"
+#include "../utils/FabricaSistema.h"
+#include "../utils/DatosPrueba.h"
 #include "../datatypes/DtLector.h"
 #include "../datatypes/DtFuncionario.h"
 #include "../datatypes/DtMaterialResumen.h"
@@ -499,4 +500,5 @@ void Menu::pausar() const {
     cout << "Presione ENTER para continuar...";
     cin.get();
 }
+
 
