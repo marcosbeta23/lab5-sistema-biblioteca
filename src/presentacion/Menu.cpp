@@ -5,7 +5,7 @@
 #include <vector>
 #include <stdexcept>
 
-#include "../utils/FabricaSistema.h"
+#include "../utils/FabricaSistema.h"`n#include "../utils/DatosPrueba.h"
 #include "../datatypes/DtLector.h"
 #include "../datatypes/DtFuncionario.h"
 #include "../datatypes/DtMaterialResumen.h"
@@ -476,7 +476,22 @@ void Menu::opcionConsultarFechaSistema() {
 void Menu::opcionCargarDatosPrueba() {
     cout << endl;
     cout << "--- Cargar datos de prueba ---" << endl;
-    cout << "Esta opcion se implementara en la CARD 9." << endl;
+
+    DatosPrueba::cargarDatosPrueba();
+
+    cout << "Datos de prueba cargados correctamente." << endl;
+    cout << endl;
+    cout << "Usuario funcionario inicial:" << endl;
+    cout << "Id: admin" << endl;
+    cout << "Contrasena: admin" << endl;
+    cout << endl;
+    cout << "Lectores cargados:" << endl;
+    cout << "- lec1 / Lector Uno" << endl;
+    cout << "- lec2 / Lector Dos" << endl;
+    cout << endl;
+    cout << "Materiales cargados:" << endl;
+    cout << "- LIB1 / Libro de prueba" << endl;
+    cout << "- REV1 / Revista de prueba" << endl;
 }
 
 void Menu::pausar() const {
@@ -484,3 +499,4 @@ void Menu::pausar() const {
     cout << "Presione ENTER para continuar...";
     cin.get();
 }
+
